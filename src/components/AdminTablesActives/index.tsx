@@ -10,7 +10,7 @@ export const AdminTablesActives = () => {
 
   const { tablesRestaurantActives } = useContext(AdminContext);
 
-  const numberTable = JSON.parse(localStorage.getItem('table') as any)
+  /* const numberTable = JSON.parse(localStorage.getItem('table') as any) */
 
   const handleDesactivate = () => {
    /*  updateTableNumberDesactive(numberTable);
