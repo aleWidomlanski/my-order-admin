@@ -20,6 +20,7 @@ export const AdminTablesActives = () => {
       section: 'admin',
     }); */
   };
+  
 
   return (
     <>

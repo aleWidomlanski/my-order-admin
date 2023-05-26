@@ -20,6 +20,7 @@ const AdminPage = () => {
 		//Busco las mesas activas
 		fetchTablesActive()
 			.then((data) => {
+				console.log(data)
 				setTablesRestaurantActives(data);
 			})
 			.catch((e) => {
@@ -38,7 +39,7 @@ const AdminPage = () => {
 
 
 	//cada 30 segundos ejecuto este codigo
-	setTimeout(() => {
+	/* setTimeout(() => {
 		//Busco las mesas activas
 		fetchTablesActive()
 			.then((data) => {
@@ -57,7 +58,7 @@ const AdminPage = () => {
 			.catch((e) => {
 				console.log(e);
 			});
-	}, 60000);
+	}, 60000); */
 
 
 

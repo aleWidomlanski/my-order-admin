@@ -16,6 +16,7 @@ export const AdminOrdersActives = () => {
 		//vuelvo a buscar las ordenes que están pedidas pero no entregadas
 		fetchOrderItem()
 			.then((data) => {
+                console.log(data)
 				return setOrderItem(data);
 			})
 			.catch((err) => {
