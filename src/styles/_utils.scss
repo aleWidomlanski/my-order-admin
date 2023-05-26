@@ -1,0 +1,21 @@
+@import 'config';
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == mobileMedim {
+    @media screen and (min-width: 475px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint ==tablet {
+    @media screen and (min-width: 768px) and (max-width: 1000px) {
+      @content;
+    }
+  }
+}
+
+@mixin title {
+  font-family: $font-family-primary;
+  font-weight: bold;
+  font-size: 1.3rem;
+}

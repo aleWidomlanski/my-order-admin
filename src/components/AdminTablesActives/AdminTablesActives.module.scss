@@ -1,0 +1,18 @@
+@import '../../styles/utils';
+
+.container {
+	padding: 2rem;
+	background-color: $color-secondary;
+}
+
+.header {
+	font-size: 1.5rem;
+}
+
+.containerTable {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	border-bottom: solid 1px $color-secondary;
+	margin-top: 1rem;
+}

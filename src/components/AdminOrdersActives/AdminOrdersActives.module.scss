@@ -1,0 +1,37 @@
+@import '../../styles/utils';
+
+.container {
+	padding: 2rem;
+	background-color: $color-secondary;
+}
+
+.containerOrder {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-bottom: solid 1px $color-secondary;
+	margin-top: 1rem;
+	border: solid;
+	text-align: center;
+	gap: 0.5rem;
+	padding: 1rem;
+}
+
+.header {
+	font-size: 1.5rem;
+}
+
+.title {
+	font-weight: bold;
+}
+
+.description {
+	font-weight: 400;
+}
+
+.table {
+	background-color: $color-secondary;
+	color: $color-primary;
+	padding: 0.5rem;
+}
