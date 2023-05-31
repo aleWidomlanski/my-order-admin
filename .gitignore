@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+aws-exports.js
 /.pnp
 .pnp.js
 

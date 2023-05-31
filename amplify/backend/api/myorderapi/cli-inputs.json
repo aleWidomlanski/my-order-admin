@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "paths": {
+    "/tables": {
+      "name": "/tables",
+      "lambdaFunction": "functionLambdaTables",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/items": {
+      "name": "/items",
+      "lambdaFunction": "functionLambdaItems",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}
