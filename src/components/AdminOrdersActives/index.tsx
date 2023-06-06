@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { AdminContext } from "../../context/AdminContext";
-import { fetchOrderItem/* , makeDelivered  */} from "../../services/admin";
+import { fetchOrderItem/* , makeDelivered  */} from "../../services/tables";
 import { PlateSelected } from "../../interfaces/interfaces";
 import styles from './AdminOrdersActives.module.scss'
 
@@ -24,6 +24,8 @@ export const AdminOrdersActives = () => {
                 
 			});
 	}
+
+    console.log(orderItem)
 
     return (
         <>

@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { AdminContext, /* SearchContext */ } from "../../context/AdminContext";
 import styles from './AdminTablesActives.module.scss'
-import { /* updateTableNumberDesactive  */} from "../../services/admin";
+/* import {  updateTableNumberDesactive} from "../../services/admin"; */
 /* import { ModalInfo } from "../ModalInfo"; */
 
 export const AdminTablesActives = () => {

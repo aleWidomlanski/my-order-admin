@@ -2,7 +2,7 @@
 import { useContext, useEffect } from 'react';
 import { AdminOrdersActives, AdminTablesActives/* , MainLoading  */} from '../../components/index';
 import { AdminContext, /* OrderContext  */} from '../../context/AdminContext';
-import { fetchOrderItem, fetchTablesActive } from '../../services/admin';
+import { fetchOrderItem, fetchTablesActive } from '../../services/tables';
 
 
 
