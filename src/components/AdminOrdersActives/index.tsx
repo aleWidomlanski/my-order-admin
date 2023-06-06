@@ -25,7 +25,6 @@ export const AdminOrdersActives = () => {
 			});
 	}
 
-    console.log(orderItem)
 
     return (
         <>
