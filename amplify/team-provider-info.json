@@ -17,6 +17,10 @@
           "deploymentBucketName": "amplify-myorder-dev-231608-deployment",
           "s3Key": "amplify-builds/functionLambdaTables-4651426d325072763746-build.zip"
         },
+        "functionLambdaRestaurants": {
+          "deploymentBucketName": "amplify-myorder-dev-231608-deployment",
+          "s3Key": "amplify-builds/functionLambdaRestaurants-6a4f6f75644f792b3330-build.zip"
+        },
         "functionLambdaItems": {
           "deploymentBucketName": "amplify-myorder-dev-231608-deployment",
           "s3Key": "amplify-builds/functionLambdaItems-31633635326258667170-build.zip"

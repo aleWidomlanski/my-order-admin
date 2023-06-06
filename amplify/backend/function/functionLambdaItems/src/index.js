@@ -27,7 +27,7 @@ exports.handler = async (event) => {
 
     if (event.queryStringParameters?.categories !== undefined) {
         const promiseQuery = new Promise((resolve) => {
-            connection.query(`SELECT * from Category ORDER BY CategoryID Asc;`, function (error, results, fields) {
+            connection.query(`SELECT * from Category`, function (error, results, fields) {
                 resolve(results)
             });
         })
@@ -39,35 +39,37 @@ exports.handler = async (event) => {
             });
         })
         result = await promiseQuery
-    }
-    else if (event.queryStringParameters?.fetchItemPeopleInTable !== undefined) {
+    } else if (event.queryStringParameters?.searchCard !== undefined) {
         const promiseQuery = new Promise((resolve) => {
-            connection.query(`select id_item as ItemID, title, quantity, price,state from Item_peopleInTable , Item
-Where Item_peopleInTable.id_item = Item.ItemID AND Item_peopleInTable.id_peopleInTable = ${JSON.stringify(event.queryStringParameters.fetchItemPeopleInTable)} ORDER BY date DESC;`, function (error, results, fields) {
+            connection.query(`select * from Item where title = "%${event.queryStringParameters.search}%"`, function (error, results, fields) {
+                resolve(results)
+            });
+        })
+        result = await promiseQuery
+    } else if (event.queryStringParameters?.ranking !== undefined) {
+        const promiseQuery = new Promise((resolve) => {
+            connection.query(`SELECT * FROM Item WHERE id IN(2,61,83)`, function (error, results, fields) {
                 resolve(results)
             });
         })
         result = await promiseQuery
     }
-    else if (event.queryStringParameters?.itemsAcordingCategory !== undefined) {
+    else if (event.queryStringParameters?.dayPlates !== undefined) {
         const promiseQuery = new Promise((resolve) => {
-            connection.query(`select ItemID, title, description, price from Category , Item
-where CategoryID = Item.id_category AND CategoryID=${event.queryStringParameters.itemsAcordingCategory}`, function (error, results, fields) {
+            connection.query(`SELECT * FROM Item WHERE id IN(37,85,81,111)`, function (error, results, fields) {
                 resolve(results)
             });
         })
         result = await promiseQuery
     }
-
-    else if (event.queryStringParameters?.makeDelivered !== undefined) {
+    else if (event.queryStringParameters?.specials !== undefined) {
         const promiseQuery = new Promise((resolve) => {
-            connection.query(`Update Item_peopleInTable SET state = "delivered" where ItemPeopleInTableID = ${JSON.stringify(event.pathParameters.proxy.slice(0, 36))} ;`, function (error, results, fields) {
+            connection.query(`SELECT * FROM Item WHERE id IN(47,72,89)`, function (error, results, fields) {
                 resolve(results)
             });
         })
         result = await promiseQuery
     }
-
 
     return {
         statusCode: 200,
