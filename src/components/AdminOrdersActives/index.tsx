@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AdminContext } from "../../context/AdminContext";
-import { fetchOrderItem/* , makeDelivered  */} from "../../services/tables";
+import { fetchOrderItem} from "../../services/tables";
+import {makeDelivered } from "../../services/items"
 import { PlateSelected } from "../../interfaces/interfaces";
 import styles from './AdminOrdersActives.module.scss'
 
@@ -11,7 +12,7 @@ export const AdminOrdersActives = () => {
     const handleClickDelivered = (orderProduct: PlateSelected) => () => {
 
 		//seteo producto como entregado
-	/* 	makeDelivered(orderProduct.ItemID) */
+	 	makeDelivered(orderProduct.ItemID) 
 
 		//vuelvo a buscar las ordenes que están pedidas pero no entregadas
 		fetchOrderItem()

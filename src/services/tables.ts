@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { TableRestaurant } from '../interfaces';
+import { TableRestaurant } from '@/interfaces/interfaces';
 
 
 async function fetchTable(tableID: string | null) {
