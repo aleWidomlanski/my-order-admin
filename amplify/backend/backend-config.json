@@ -1,0 +1,101 @@
+{
+  "api": {
+    "myorderapi": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "functionLambdaTables"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "functionLambdaRestaurants"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "functionLambdaItems"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "functionLambdaItems": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "functionLambdaRestaurants": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "functionLambdaTables": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_functionLambdaItems_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "functionLambdaItems"
+        }
+      ]
+    },
+    "AMPLIFY_function_functionLambdaItems_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "functionLambdaItems"
+        }
+      ]
+    },
+    "AMPLIFY_function_functionLambdaRestaurants_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "functionLambdaRestaurants"
+        }
+      ]
+    },
+    "AMPLIFY_function_functionLambdaRestaurants_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "functionLambdaRestaurants"
+        }
+      ]
+    },
+    "AMPLIFY_function_functionLambdaTables_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "functionLambdaTables"
+        }
+      ]
+    },
+    "AMPLIFY_function_functionLambdaTables_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "functionLambdaTables"
+        }
+      ]
+    }
+  }
+}
